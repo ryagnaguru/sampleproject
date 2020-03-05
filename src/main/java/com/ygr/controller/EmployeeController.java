@@ -1,13 +1,15 @@
 package com.ygr.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import com.ygr.pojo.Employee;
 import com.ygr.service.EmployeeService;
-import com.ygr.service.impl.EmployeeServiceImpl;
 
 public class EmployeeController {
 	
+	@Autowired
+	EmployeeService employeeService;
 	
-	EmployeeService employeeService = new EmployeeServiceImpl();
 	public void saveEmployee( Employee employee ) {
 		
 		employeeService.saveEmployee(employee);

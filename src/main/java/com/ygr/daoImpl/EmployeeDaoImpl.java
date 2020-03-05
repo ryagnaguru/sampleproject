@@ -4,10 +4,14 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.springframework.stereotype.Repository;
+
 import com.ygr.dao.EmployeeDao;
 import com.ygr.pojo.Address;
 import com.ygr.pojo.Employee;
 
+
+@Repository
 public class EmployeeDaoImpl implements EmployeeDao {
 	
 	
