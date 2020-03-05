@@ -1,9 +1,10 @@
 package com.ygr.sample;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
-import java.util.List;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.ygr.controller.EmployeeController;
 import com.ygr.pojo.Address;
@@ -14,12 +15,18 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		EmployeeController controller = new EmployeeController();
-		saveEmployee(controller);
+		ApplicationContext applicationContext=
+                new ClassPathXmlApplicationContext("application-context.xml");
 		
-		getemployee(1112, controller);
+		EmployeeController employeeController = applicationContext.getBean("employeeController", EmployeeController.class);
+		
+		saveEmployee(employeeController);
 		
 		
+//		EmployeeController controller = new EmployeeController();
+//		
+//		saveEmployee(controller);
+//		getemployee(1112, controller);
 		
 	}
 	

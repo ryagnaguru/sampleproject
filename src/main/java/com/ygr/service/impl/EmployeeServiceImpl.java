@@ -9,7 +9,6 @@ public class EmployeeServiceImpl implements EmployeeService {
 
 	EmployeeDao dao = new EmployeeDaoImpl();
 	public void saveEmployee(Employee employee) {
-
 		dao.saveEmployee(employee);
 	}
 	
